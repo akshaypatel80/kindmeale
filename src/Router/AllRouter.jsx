@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import KindMomentsSinglPage from "../Components/KindMoments/KindMomentsSinglPage";
 import Articles from "./Articles";
 import Directory from "./Directory";
 import Help from "./Help";
@@ -15,6 +16,10 @@ const AllRouter = () => {
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/MealDeals" element={<MealDeals />}></Route>
         <Route path="/KindMoments" element={<KindMoments />}></Route>
+        <Route
+          path="/KindMoments/:id"
+          element={<KindMomentsSinglPage />}
+        ></Route>
         <Route path="/HotPicks" element={<HotPicks />}></Route>
         <Route path="/Recipes" element={<Recipes />}></Route>
         <Route path="/Directory" element={<Directory />}></Route>
