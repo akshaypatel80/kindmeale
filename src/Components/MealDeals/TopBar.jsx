@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-const TopBar = () => {
+const TopBar = ({ handlChangeCategoris }) => {
   return (
     <div>
       <Container maxW={"75%"}>
@@ -40,20 +40,29 @@ const TopBar = () => {
             />
             <Select
               variant="outline"
-              placeholder="Outline"
+              placeholder="All Categories"
               bg={"white"}
               size="md"
+              onChange={(e) => handlChangeCategoris(e.target.value)}
             >
-              <option value="">akshay</option>
-            </Select>{" "}
+              <option value="Pasta">Pasta</option>
+              <option value="Burger">Burger</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Salad">Salad</option>
+              <option value="Bakery">Bakery</option>
+              <option value="TeaDessert">Tea & Dessert</option>
+              <option value="LocalDelights">Local Delights</option>
+              <option value="Jap&Korean">Jap & Korean</option>
+              <option value="Chinese">Chinese</option>
+              <option value="Indian">Indian</option>
+              <option value="Soup">Soup</option>
+            </Select>
             <Select
               variant="outline"
               placeholder="Outline"
               bg={"white"}
               size="md"
-            >
-              <option value="">akshay</option>
-            </Select>
+            ></Select>
             <Button width={"80%"} colorScheme="red">
               Search Deals
             </Button>
