@@ -6,12 +6,30 @@ import {
   Button,
   Divider,
   Center,
+  Toast,
+  useToast,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { Appcontext } from "../../context/AuthContex";
 import Login from "./Login";
+import Logout from "./Logout";
 
 const NavbarTop = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const { isAuth, handleLogout } = useContext(Appcontext);
+  const toast = useToast();
+  function handleLogoutButton() {
+    toast({
+      title: "Logout",
+      description: "Have A Nice Day",
+      status: "info",
+      duration: 2000,
+      position: "top",
+      isClosable: true,
+    });
+    handleLogout();
+  }
+
   return (
     <>
       <Container maxW={"container.xl"}>
@@ -37,25 +55,29 @@ const NavbarTop = () => {
               width={10}
             />
           </HStack>
-          <HStack>
-            <Button size={"sm"}>Login</Button>
-            <Button colorScheme="facebook" size={"sm"}>
-              Facebook
-            </Button>
-            <Button
-              size={"sm"}
-              bg={"#666666"}
-              color={"white"}
-              _hover={{ background: "#66666" }}
-              onClick={() => setIsModalVisible(true)}
-            >
-              Email
-            </Button>
-            <Center height="50px">
-              <Divider orientation="vertical" />
-            </Center>
-            <Button size={"sm"}>Sign Up</Button>
-          </HStack>
+          {isAuth ? (
+            <Logout handleLogoutButton={handleLogoutButton} />
+          ) : (
+            <HStack>
+              <Button size={"sm"}>Login</Button>
+              <Button colorScheme="facebook" size={"sm"}>
+                Facebook
+              </Button>
+              <Button
+                size={"sm"}
+                bg={"#666666"}
+                color={"white"}
+                _hover={{ background: "#66666" }}
+                onClick={() => setIsModalVisible(true)}
+              >
+                Email
+              </Button>
+              <Center height="50px">
+                <Divider orientation="vertical" />
+              </Center>
+              <Button size={"sm"}>Sign Up</Button>
+            </HStack>
+          )}
         </HStack>
       </Container>
       <Login
