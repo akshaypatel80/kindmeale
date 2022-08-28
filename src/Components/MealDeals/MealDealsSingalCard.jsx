@@ -102,7 +102,7 @@ const MealDealsSingalCard = ({
         <Divider orientation="vertical" height="50px" />
         <Skeleton isLoaded={isLoding}>
           <VStack align={"center"} spacing={1}>
-            <Text>KindMeal Discount</Text>
+            <Text>Expires In</Text>
             <Text
               color={"#888888"}
               fontSize={"24px"}
