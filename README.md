@@ -1,23 +1,23 @@
 # screenshot
 
-<div>
+<div align="center">
 <span>
-<img src=./kindmeal-screenshot/Home.png/>
-<span>
-<span>
-<img src=./kindmeal-screenshot/MealDeals.png/>
+<img src="./kindmeal-screenshot/Home.png"/ width="35%">
 <span>
 <span>
-<img src=./kindmeal-screenshot/KindMoments.png/>
+<img src="./kindmeal-screenshot/MealDeals.png" width="35%"/>
 <span>
 <span>
-<img src=./kindmeal-screenshot/Articles.png/>
+<img src="./kindmeal-screenshot/KindMoments.png" width="35%"/>
 <span>
 <span>
-<img src=./kindmeal-screenshot/Login.png/>
+<img src="./kindmeal-screenshot/Articles.png"width="35%"/>
 <span>
 <span>
-<img src=./kindmeal-screenshot/Navbar.png/>
+<img src=./kindmeal-screenshot/Login.png/ width="35%">
+<span>
+<span>
+<img src=./kindmeal-screenshot/Navbar.png/ width="35%">
 <span>
 </div>
 
